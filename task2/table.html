@@ -8,18 +8,23 @@
     <link href="Table.css" rel="stylesheet">
     <link rel="shortcut icon" href="images/Emblem_Serenitea_Pot.png" type="image/png">
 </head>
-<body vocab="http://schema.org/">
-    <header class="vcard">
-        <div><img class="photo" src="images/Emblem_Serenitea_Pot.png"></div>
-        <div><p class="fn org" style="margin-right: 30px;">GenshinImpactFAN</p></div>
-        <div><img class="photo" src="images/Emblem_Serenitea_Pot.png"></div>
+<!-- словарь, который по умолчанию будет использоваться в аннотациях,RDFa -->
+<!-- Так же использую микроформат hCard-->
+<body class="vcard" vocab="http://schema.org/">
+    <header role="banner">
+        <div><img class="logo" type="Organization" src="images/Emblem_Serenitea_Pot.png" itemprop="image" alt="logo"></div>
+        <!-- название организации, микроформат hCard -->
+        <div><span class="fn org" style="margin-right: 30px;">GenshinImpactFAN</span></div>
+        <div><img class="logo" type="Organization" src="images/Emblem_Serenitea_Pot.png" itemprop="image" alt="logo"></div>
     </header>
+    <!-- Навигационное меню-->
     <nav class="menu">
-        <a href="home.html"><li>Главная</li></a>
-        <a href="table.html"><li>Таблица</li></a>
-        <a href="about.html"><li>Об авторе</li></a>
+        <a rel="foaf:topic" class="main" href="home.html"><li>Главная</li></a>
+        <a rel="foaf:topic" class="table" href="table.html"><li>Таблица</li></a>
+        <a rel="foaf:topic" class="about" href="about.html"><li>Об авторе</li></a>
     </nav>
-    <article>
+    <!-- основное содержимое -->
+    <article class="content">
         <h1 style="text-align: center;">Регионы в игре</h1>
         <form class="tabs">
             <div>
@@ -78,10 +83,13 @@
             </div>
         </form>
     </article>
-    <footer class="vevent">
-        <p class="summary">© Отчик Владислав</p>
-        <p class="dtstart">22 октября 2021</p>
-        <p class="description">Version: 2.0</p>
+    <footer class="wrap_footer">
+        <!-- Автор-->
+        <p class="footer-block">© <span property="dc:creator">Отчик Владислав</span></p>
+        <!-- Создание сайта-->
+        <p><span property="dc:date">22 октября 2021</span></p>
+        <!-- Версия сайта -->
+        <p class="footer-block">Version: 2.0</p>
     </footer>
 </body>
 </html>
