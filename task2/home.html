@@ -1,43 +1,45 @@
 <!DOCTYPE html>
-<!-- подключение словаря,RDFa -->
-<html lang="en" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"></html>
+<!-- dictionary connection, RDFa -->
+<html lang="en" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:foaf="http://xmlns.com/foaf/0.1/">
 <head>
     <meta charset="utf-8">
-    <title>GenshinImpactFAN</title>
+    <title>Главная</title>
     <link href="Styles.css" rel="stylesheet">
     <link rel="shortcut icon" href="images/Emblem_Serenitea_Pot.png" type="image/png">
 </head>
-<!-- словарь, который по умолчанию будет использоваться в аннотациях,RDFa -->
-<!-- Так же использую микроформат hCard-->
+<!-- a dictionary that will be used by default in annotations, RDFa -->
+<!-- I also use the hCard microformat-->
 <body class="vcard" vocab="http://schema.org/">
-    <header role="banner">
-        <div><img class="logo" type="Organization" src="images/Emblem_Serenitea_Pot.png" itemprop="image" alt="logo"></div>
-        <!-- название организации, микроформат hCard -->
-        <div><span class="fn org" style="margin-right: 30px;">GenshinImpactFAN</span></div>
-        <div><img class="logo" type="Organization" src="images/Emblem_Serenitea_Pot.png" itemprop="image" alt="logo"></div>
+    <!--Микроданные-->
+    <header role="banner" itemscope itemtype="https://schema.org/Organization">
+        <!-- organization name and logo, hCard microformat -->
+        <div><img class="logo" src="images/Emblem_Serenitea_Pot.png" itemprop="image" alt="logo"></div>
+        <div><span class="fn org" style="margin-right: 30px;" itemprop="name">GenshinImpactFAN</span></div>
+        <div><img class="logo" src="images/Emblem_Serenitea_Pot.png" itemprop="image" alt="logo"></div>
     </header>
-    <!-- Навигационное меню-->
+    <!-- Navigation menu-->
     <nav class="menu">
         <a rel="foaf:topic" class="main" href="home.html"><li>Главная</li></a>
         <a rel="foaf:topic" class="table" href="table.html"><li>Таблица</li></a>
         <a rel="foaf:topic" class="about" href="about.html"><li>Об авторе</li></a>
     </nav>
-    <!-- основное содержимое -->
-    <article class="content">
+    <!-- main content -->
+    <!-- Microdata-->
+    <article class="content" itemscope itemtype="https://schema.org/Game">
         <h1 style="text-align: center;">Информация о сайте</h1>
-        <!-- Текстовое наполнение -->
-        <!-- property="image" - указывает на свойства, RDFa стандарт -->
-        <p style="text-align:justify;"><img style="margin: 10px;" src="images/паймон1.gif" width="130" height="130" align="right"
-        vspace="5" hspace="5" property="image">&emsp;<span property="name"><ins>GenshinImpactFAN</ins></span> – информационный ресурс, посвященный современной многопользовательской онлайн игре <i>Genshin Impact</i>. Я стараюсь <i><sup>первым</sup></i> представить важную информацию о новинках, анонсах, датах выхода и этапах тестирования новых персонажей и локаций.
+        <!-- Text content -->
+        <p style="text-align:justify;" itemprop="description"><img style="margin: 10px;" src="images/паймон1.gif" width="130" height="130" align="right"
+        vspace="5" hspace="5" itemprop="image">&emsp;<span itemprop="name"><ins>GenshinImpactFAN</ins></span> – информационный ресурс, посвященный современной многопользовательской онлайн игре <i>Genshin Impact</i>. Я стараюсь <i><sup>первым</sup></i> представить важную информацию о новинках, анонсах, датах выхода и этапах тестирования новых персонажей и локаций.
         У меня вы найдете полезные сервисы, в том числе расписание и релизы новых персонажей, информационную базу по артефактам, персонажам и талантам, интересные мифы и другая информация. Оставайтесь со мной, развивайтесь со мной, <del>будьте в курсе</del>!</p>
     </article>
+    <!--RDFa-->
     <footer class="wrap_footer">
-        <!-- Автор-->
+        <!-- author-->
         <p class="footer-block">© <span property="dc:creator">Отчик Владислав</span></p>
-        <!-- Создание сайта-->
-        <p><span property="dc:date">22 октября 2021</span></p>
-        <!-- Версия сайта -->
-        <p class="footer-block">Version: 2.0</p>
+        <!-- Time of website creation-->
+        <p><span property="dc:modified" datatype="xsd:date" content="2021-10-22">22 октября 2021</span></p>
+        <!-- Site version -->
+        <p class="note">Version: 2.0</p>
     </footer>
 </body>
 </html>
