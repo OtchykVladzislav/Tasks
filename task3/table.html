@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!-- dictionary connection, RDFa -->
+<html lang="en" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:foaf="http://xmlns.com/foaf/0.1/">
+<head>
+    <meta charset="utf-8">
+    <!--To adapt-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Таблица</title>
+    <link href="css/Styles.css" rel="stylesheet">
+    <link href="css/Table.css" rel="stylesheet">
+    <link href="css/adaptative.css" rel="stylesheet">
+    <!--=============== BOXICONS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="shortcut icon" href="images/Emblem_Serenitea_Pot.png" type="image/png">
+</head>
+<!-- a dictionary that will be used by default in annotations, RDFa -->
+<!-- I also use the hCard microformat-->
+<body class="vcard" vocab="http://schema.org/" style="background-image: url(images/Xq5CsOIv1A8.jpg);">
+    <!--Microdate-->
+    <header class="head_div" role="banner" itemscope itemtype="https://schema.org/Organization">
+        <!-- organization name and logo, hCard microformat -->
+        <div><img class="logo" src="images/Emblem_Serenitea_Pot.png" itemprop="image" alt="logo"></div>
+        <div style="margin-top: 2.5%;"><span class="fn org" style="margin-right: 30px;" itemprop="name">GenshinImpactFAN</span></div>
+        <!-- Navigation menu-->
+        <nav class="menu" id="nav-menu">
+            <!--Selection icon-->
+            <div class="nav__close" id="nav-close">
+                <i class='bx bx-x'></i>
+            </div>
+            <ul class="nav_list">
+                <a rel="foaf:topic" class="nav_link" href="home.html"><li>Главная</li></a>
+                <a rel="foaf:topic" class="nav_link" href="table.html"><li>Таблица</li></a>
+                <a rel="foaf:topic" class="nav_link" href="about.html"><li>Об авторе</li></a>
+            </ul>
+            </nav>
+            <!--Close icon-->
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-grid-alt'></i>
+            </div>
+        </header>
+        <!--A script for working with an adaptive menu-->
+        <script src="js/main.js"></script>
+    <!-- main content -->
+    <!-- RDFa-->
+    <article class="content">
+        <h1 style="text-align: center;">Регионы в игре</h1>
+        <!-- Form for table-->
+        <form class="tabs" typeof="Table">
+            <!-- First table-->
+            <div class="table1">
+                <!-- Fields to switch-->
+                <input type="radio" name="tabs" id="tab-1" checked>
+                <label for="tab-1">Мондштадт</label>
+                <!-- Table-->
+                <table style="color:cyan" cellpadding="5" class="tab-content">
+                    <tr>
+                        <th>Изображение</th>
+                        <th>Название</th>
+                        <th>Описание</th>
+                    </tr>
+                    <tr>
+                        <td><img src="images/монштанд.png" property="image"></td>
+                        <td property="name">Мондштадт</td>
+                        <td><p property="description">Мондштадт (нем. Mondstadt Мондстадт, «Лунный город») — один из семи регионов Тейвата и первый, куда Путешественник прибывает в поисках своего потерянного родственника. Это город-государство, который поклоняется Анемо Архонту Барбатосу.
+                            В Мондштадте, с самого его основания, ежегодно проводится фестиваль под названием Луди Гарпастум — праздник песен, вина и полёта, длящийся 15 дней.
+                            Две тысячи шестьсот лет назад народ Мондштадта был разделен между двумя соперничающими силами: Королем Штормов, Анемо Архонтом Декарабианом, и Королем Севера, Андриусом. Андриус не мог повредить башню Декарабиана, которая была защищена свирепыми штормами. 
+                            В то время как Декарабиан защищал свой народ, он не давал им свободы; они не могли пройти через ветряные потоки, окружавшие город. 
+                        </p></td>
+                    </tr>
+                </table>
+            </div>
+            <!-- Second table-->
+            <div class="table2">
+                <!-- Fields to switch-->
+                <input type="radio" name="tabs" id="tab-2">
+                <label for="tab-2">Ли Юэ</label>
+                <!-- Table-->
+                <table style="color:#FF8C00" cellpadding="5" class="tab-content">
+                    <tr>
+                        <th>Изображение</th>
+                        <th>Название</th>
+                        <th>Описание</th>
+                    </tr>
+                    <tr>
+                        <td><img src="images/ли юэ.png" property="image"></td>
+                        <td property="name">Ли Юэ</td>
+                        <td><p property="description">Ли Юэ (кит. 璃月 Líyuè, «Стеклянная луна») — одно из семи королевств Тейвата. Это страна поклоняющаяся Гео Архонту Мораксу или же Властелину Камня, как его называют сами жители Ли Юэ.Ландшафт Ли Юэ формируют гордо возвышающиеся скалистые горы и каменные леса, обширные равнины и оживлённые побережья. 
+                            Климат этих земель круглый год переливается пёстрыми цветами и красками. </p></td>
+                    </tr>
+                </table>
+            </div>
+            <!-- Third table-->
+            <div class="table3">
+                <!-- Fields to switch-->
+                <input type="radio" name="tabs" id="tab-3">
+                <label for="tab-3">Инадзума</label>
+                <!-- Table-->
+                <table style="color:#EE82EE" cellpadding="5" class="tab-content">
+                    <tr>
+                        <th>Изображение</th>
+                        <th>Название</th>
+                        <th>Описание</th>
+                    </tr>
+                    <tr>
+                        <td><img src="images/инадзума.png" property="image"></td>
+                        <td property="name">Инадзума</td>
+                        <td><p property="description">Инадзума (яп. 稲妻 Inazuma, «Молния») – одно из семи королевств Тейвата. Это страна, которая поклоняется Электро Архонту Сёгуну Райдэн, Вельзевул, и лидеру руководящей страной группировки, Бакуфу Инадзумы.
+                            Жители Инадзумы не совсем дружелюбно относятся к обладателям Глаза Бога из-за приказа об «охоте на Глаза Бога», данного Архонтом Бакуфу Инадзумы, Баал. Приказ был издан для того, чтобы собрать все Глаза Бога.</p></td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </article>
+    <!--RDFa-->
+    <footer class="wrap_footer">
+        <!-- author-->
+        <p class="footer-block">© <span property="dc:creator">Отчик Владислав</span></p>
+        <!-- Time of website creation-->
+        <p><span property="dc:modified" datatype="xsd:date" content="2021-10-22">22 октября 2021</span></p>
+        <!-- Site version -->
+        <p class="note">Version: 3.0</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- dictionary connection, RDFa -->
+<html lang="en" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:foaf="http://xmlns.com/foaf/0.1/">
+<head>
+    <meta charset="utf-8">
+    <!--To adapt-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">">
+    <title>Главная</title>
+    <link href="css/Styles.css" rel="stylesheet">
+    <link href="css/adaptative.css" rel="stylesheet">
+    <!--=============== BOXICONS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="shortcut icon" href="images/Emblem_Serenitea_Pot.png" type="image/png">
+</head>
+<!-- a dictionary that will be used by default in annotations, RDFa -->
+<!-- I also use the hCard microformat-->
+<body class="vcard" vocab="http://schema.org/" style="background-image: url(images/Xq5CsOIv1A8.jpg);">
+    <!--Microdate-->
+    <header class="head_div" role="banner" itemscope itemtype="https://schema.org/Organization">
+        <!-- organization name and logo, hCard microformat -->
+        <div><img class="logo" src="images/Emblem_Serenitea_Pot.png" itemprop="image" alt="logo"></div>
+        <div style="margin-top: 2.5%;"><span class="fn org" itemprop="name">GenshinImpactFAN</span></div>
+        <!-- Navigation menu-->
+        <nav class="menu" id="nav-menu">
+        <!--Selection icon-->
+        <div class="nav__close" id="nav-close">
+            <i class='bx bx-x'></i>
+        </div>
+        <ul class="nav_list">
+            <a rel="foaf:topic" class="nav_link" href="home.html"><li>Главная</li></a>
+            <a rel="foaf:topic" class="nav_link" href="table.html"><li>Таблица</li></a>
+            <a rel="foaf:topic" class="nav_link" href="about.html"><li>Об авторе</li></a>
+        </ul>
+        </nav>
+        <!--Close icon-->
+        <div class="nav__toggle" id="nav-toggle">
+            <i class='bx bx-grid-alt'></i>
+        </div>
+    </header>
+    <!--A script for working with an adaptive menu-->
+    <script src="js/main.js"></script>
+    <!-- main content -->
+    <!-- Microdata-->
+    <article class="content">
+        <h1>Новости</h1>
+        <section class="lent">
+            <a href="#"><div style="background-image: url(images/1banner.jpg);">Рыбалка в Genshin Impact</div></a>
+            <a href="#"><div style="background-image: url(images/2banner.jpg);">Гайд на Баал</div></a>
+            <a href="#"><div style="background-image: url(images/3banner.jpg);">Обнова 2.3. Патчноут</div></a>
+        </section>
+        <section class="info" itemscope itemtype="https://schema.org/Game">
+        <h1 style="text-align: center;">Информация о сайте</h1>
+        <!-- Text content -->
+        <p style="text-align:justify;" itemprop="description"><img style="margin: 10px;" src="images/паймон1.gif" width="130" height="130" align="right"
+        vspace="5" hspace="5" itemprop="image">&emsp;<span itemprop="name"><ins>GenshinImpactFAN</ins></span> – информационный ресурс, посвященный современной многопользовательской онлайн игре <i>Genshin Impact</i>. Я стараюсь <i><sup>первым</sup></i> представить важную информацию о новинках, анонсах, датах выхода и этапах тестирования новых персонажей и локаций.
+        У меня вы найдете полезные сервисы, в том числе расписание и релизы новых персонажей, информационную базу по артефактам, персонажам и талантам, интересные мифы и другая информация. Оставайтесь со мной, развивайтесь со мной, <del>будьте в курсе</del>!</p>
+        </section>
+    </article>
+    <!--RDFa-->
+    <footer class="wrap_footer">
+        <!-- author-->
+        <p class="footer-block">© <span property="dc:creator">Отчик Владислав</span></p>
+        <!-- Time of website creation-->
+        <p><span property="dc:modified" datatype="xsd:date" content="2021-10-22">22 октября 2021</span></p>
+        <!-- Site version -->
+        <p class="note">Version: 3.0</p>
+    </footer>
+</body>
+</html>
