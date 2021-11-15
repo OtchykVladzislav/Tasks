@@ -1,11 +1,14 @@
+@size:100px;
+@block: block;
+
 /* Table text */
 .tab-content p{
     text-align: justify;
 }
 /*Picture sizes in the table*/
 .tab-content img{
-    width: 100px;
-    height: 100px;
+    width: @size;
+    height: @size;
 }
 /*For table header*/
 th {
@@ -20,7 +23,7 @@ th {
 .tabs:after {
     content: "";
     clear: both;
-    display: block;
+    display: @block;
     height: 380px;
 }
 
@@ -59,6 +62,6 @@ th {
 
 /*Selected table block*/
 .tabs div > input:checked ~ .tab-content {
-    display: block;
+    display: @block;
 }
 
