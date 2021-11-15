@@ -1,0 +1,131 @@
+@d_color:black;
+@l_color:white;
+@lineblock: inline-block;
+
+.border_radius{
+    -webkit-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border-radius: 5px;
+}
+
+
+.scroll_block(@radius){
+    -webkit-border-radius: @radius;
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+    border-radius: @radius;
+}
+
+.test_block(@radius,@bg_color:#999,@color:#f3faf7){
+    .scroll_block(@radius);
+    background-color: @bg_color;
+    box-shadow: inset 1px 1px 10px @color;
+}
+
+.pos_center(){
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Change the font for the whole file*/
+*{
+    font-family: fantasy;
+}
+/* scroll bar */
+::-webkit-scrollbar {
+    width: 19px; /* width for vertical scrolling */
+    background-color: @d_color;
+}
+
+/* scrollbar slider */
+::-webkit-scrollbar-thumb{
+    .test_block(9em)
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: @d_color;
+}
+
+@path: ~"images";
+/*Background picture*/
+body{
+    background-size: cover;
+    background-image: url(~"@{path}/Xq5CsOIv1A8.jpg");
+    background-attachment: fixed;
+}
+
+/*Styling main blocks*/
+header, menu, article, footer{
+    background-color: desaturate(darken(@d_color,20%),12%);
+    opacity: .6;
+    color: lighten(@l_color,20%);
+    .border_radius;
+}
+/*Positioning and sizing the header*/
+header{
+    .pos_center;
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 18px;
+}
+/*Placing blocks by header*/
+header div{
+    display: @lineblock;
+    font-size: 35px;
+    vertical-align: middle;
+    margin-left: 9%;
+}
+/*I set the size of the picture*/
+.header_img{
+    width: 100px;
+    height: 110px;
+}
+/*Menu block*/
+menu{
+    margin-left: 25%;
+    width: 9%;
+    padding-left: 30px;
+}
+/*Working with list blocks*/
+menu li{
+    margin: 20px;
+    list-style-type: none;
+}
+/*Styling a list*/
+a{
+    text-decoration: none;
+    color: @l_color;
+}
+/*Placing blocks in one line*/
+menu, article{
+    display: @lineblock;
+    vertical-align: top;
+}
+/*Setting the width and working with the article block*/
+article{
+    margin-top: 16px;
+    width: 35%;
+    padding: 25px;  
+}
+/*Header placement*/
+h1{
+    text-align: center;
+}
+/*Positioning footer in a window*/
+footer{
+    .pos_center;
+    margin-top: 25px;
+    width: 50%;
+    vertical-align: middle;
+    text-align: center;
+}
+/*Positioning elements in footer*/
+footer p{
+    display: @lineblock;
+    margin: 33px;
+}

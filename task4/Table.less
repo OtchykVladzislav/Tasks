@@ -1,0 +1,64 @@
+/* Table text */
+.tab-content p{
+    text-align: justify;
+}
+/*Picture sizes in the table*/
+.tab-content img{
+    width: 100px;
+    height: 100px;
+}
+/*For table header*/
+th {
+    font-size: 17px;
+}
+/*relative block positioning*/
+.tabs {
+    list-style-type: none;
+    position: relative;
+}
+
+.tabs:after {
+    content: "";
+    clear: both;
+    display: block;
+    height: 380px;
+}
+
+/*Block placement with selection and table*/
+.tabs div {
+    float: left;
+}
+/*Hides input*/
+.tabs div > input {
+    display: none;
+}
+/*Choice Blocks*/
+.tabs div > label {
+    margin-left: 50px;
+    display: inline-block;
+    line-height: 30px;
+    padding: 5px 20px;
+    cursor: pointer;
+    outline: auto;
+    
+}
+/*Table block*/
+.tabs .tab-content {
+    margin: 20px;
+    display: none;
+    position: absolute;
+    left: 0;
+    height: 340px;
+    overflow: auto;
+}
+/*Selection blocks when pressed*/
+.tabs div > input:checked + label {
+    background-color: #999;
+    color: black;
+}
+
+/*Selected table block*/
+.tabs div > input:checked ~ .tab-content {
+    display: block;
+}
+
