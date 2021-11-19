@@ -1,0 +1,161 @@
+//variables
+$d_color:black;
+$l_color:white;
+$lineblock: inline-block;
+
+//mixins and @if
+@mixin theme-colors($light-theme: true) {
+  @if $light-theme {
+    color: $l_color;
+  } @else {
+    color: $d_color;
+  }
+}
+@mixin test_block($radius,$bg_color,$color){
+    border-radius: $radius;
+    background-color: $bg_color;
+    box-shadow: inset 1px 1px 10px $color;
+}
+//variebles
+$values: 9em, #999, #f3faf7;
+
+@mixin pos_center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+//variebles
+$side: 10;
+//function
+@function image($number) {
+  $result: $number * $number;
+  @return $result;
+}
+//variebles
+$themeColours: (
+    "li-1": cyan,
+    "li-2": #FF8C00,
+    "li-3": #EE82EE,
+);
+//@each for font color
+@each $themeColour, $i in $themeColours {
+    .#{$themeColour} {
+        color: $i;
+    }	
+}
+//@for for font size
+@for $i from 1 through 3 {
+    .li-#{$i} { 
+      font-size: 18px;
+    }
+}
+//@while for font style
+$count: 1;
+
+@while $count < 4 {
+    .li-#{$count} {
+        font-style: oblique;
+    }
+
+    $count: $count + 1;
+}
+
+
+/*Change the font for the whole file*/
+*{
+    font-family: fantasy;
+}
+/* scroll bar */
+::-webkit-scrollbar {
+    width: 19px; /* width for vertical scrolling */
+    background-color: $d_color;
+}
+
+/* scrollbar slider */
+::-webkit-scrollbar-thumb{
+    //using mixin
+    @include test_block($values...);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: $d_color;
+}
+
+/*Background picture*/
+body{
+    background-size: cover;
+    background-image: url("../images/Xq5CsOIv1A8.jpg");
+    background-attachment: fixed;
+}
+
+/*Styling main blocks*/
+header, menu, article, footer{
+    background-color: $d_color;
+    opacity: .6;
+    @include theme-colors($light-theme:true);
+    border-radius: 5px;
+}
+/*Positioning and sizing the header*/
+header{
+    @include pos_center;
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 18px;
+    /*Placing blocks by header*/
+    div{
+        display: $lineblock;
+        font-size: 35px;
+        vertical-align: middle;
+        margin-left: 12%;
+    }
+    /*I set the size of the picture*/
+    .header_img{
+        //using function
+        width: #{image($side)}px;
+        height: #{image($side)+10}px;
+    }
+}
+/*Menu block*/
+menu{
+    margin-left: 25%;
+    width: 9%;
+    padding-left: 30px;
+    /*Working with list blocks*/
+    li{
+        margin: 20px;
+        list-style-type: none;
+    }
+    /*Styling a list*/
+    a{
+        text-decoration: none;
+        color: $l_color;
+    }
+}
+/*Placing blocks in one line*/
+menu, article{
+    display: $lineblock;
+    vertical-align: top;
+}
+/*Setting the width and working with the article block*/
+article{
+    margin-top: 16px;
+    width: 35%;
+    padding: 25px;  
+}
+/*Header placement*/
+h1{
+    text-align: center;
+}
+/*Positioning footer in a window*/
+footer{
+    @include pos_center;
+    margin-top: 25px;
+    width: 50%;
+    vertical-align: middle;
+    text-align: center;
+    /*Positioning elements in footer*/
+    p{
+        display: $lineblock;
+        margin: 33px;
+    }
+}

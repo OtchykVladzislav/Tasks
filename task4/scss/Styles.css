@@ -1,0 +1,145 @@
+.li-1 {
+  color: cyan;
+}
+
+.li-2 {
+  color: #FF8C00;
+}
+
+.li-3 {
+  color: #EE82EE;
+}
+
+.li-1 {
+  font-size: 18px;
+}
+
+.li-2 {
+  font-size: 18px;
+}
+
+.li-3 {
+  font-size: 18px;
+}
+
+.li-1 {
+  font-style: oblique;
+}
+
+.li-2 {
+  font-style: oblique;
+}
+
+.li-3 {
+  font-style: oblique;
+}
+
+/*Change the font for the whole file*/
+* {
+  font-family: fantasy;
+}
+
+/* scroll bar */
+::-webkit-scrollbar {
+  width: 19px;/* width for vertical scrolling */
+  background-color: black;
+}
+
+/* scrollbar slider */
+::-webkit-scrollbar-thumb {
+  border-radius: 9em;
+  background-color: #999;
+  -webkit-box-shadow: inset 1px 1px 10px #f3faf7;
+          box-shadow: inset 1px 1px 10px #f3faf7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: black;
+}
+
+/*Background picture*/
+body {
+  background-size: cover;
+  background-image: url("../images/Xq5CsOIv1A8.jpg");
+  background-attachment: fixed;
+}
+
+/*Styling main blocks*/
+header, menu, article, footer {
+  background-color: black;
+  opacity: .6;
+  color: white;
+  border-radius: 5px;
+}
+
+/*Positioning and sizing the header*/
+header {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 18px;
+}
+/*Placing blocks by header*/
+header div {
+  display: inline-block;
+  font-size: 35px;
+  vertical-align: middle;
+  margin-left: 12%;
+}
+/*I set the size of the picture*/
+header .header_img {
+  width: 100px;
+  height: 110px;
+}
+
+/*Menu block*/
+menu {
+  margin-left: 25%;
+  width: 9%;
+  padding-left: 30px;
+}
+/*Working with list blocks*/
+menu li {
+  margin: 20px;
+  list-style-type: none;
+}
+/*Styling a list*/
+menu a {
+  text-decoration: none;
+  color: white;
+}
+
+/*Placing blocks in one line*/
+menu, article {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/*Setting the width and working with the article block*/
+article {
+  margin-top: 16px;
+  width: 35%;
+  padding: 25px;
+}
+
+/*Header placement*/
+h1 {
+  text-align: center;
+}
+
+/*Positioning footer in a window*/
+footer {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  width: 50%;
+  vertical-align: middle;
+  text-align: center;
+}
+/*Positioning elements in footer*/
+footer p {
+  display: inline-block;
+  margin: 33px;
+}
+/*# sourceMappingURL=Styles.css.map */

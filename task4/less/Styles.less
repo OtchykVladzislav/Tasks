@@ -1,7 +1,8 @@
+//variables
 @d_color:black;
 @l_color:white;
 @lineblock: inline-block;
-
+//mixins
 .border_radius{
     -webkit-border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -10,8 +11,12 @@
     border-radius: 5px;
     border-radius: 5px;
 }
-
-
+//parameterized mixins without parameters
+.li-style(){
+    font-size: 18px;
+    font-style: oblique;
+}
+//Mixins with parameters
 .scroll_block(@radius){
     -webkit-border-radius: @radius;
     -webkit-border-radius: @radius;
@@ -19,14 +24,14 @@
     -moz-border-radius: @radius;
     border-radius: @radius;
     border-radius: @radius;
-}
-
+} 
+//mixins with multiple parameters
 .test_block(@radius,@bg_color:#999,@color:#f3faf7){
     .scroll_block(@radius);
     background-color: @bg_color;
     box-shadow: inset 1px 1px 10px @color;
 }
-
+//parameterized mixins without parameters
 .pos_center(){
     margin-left: auto;
     margin-right: auto;
@@ -50,24 +55,28 @@
 ::-webkit-scrollbar-thumb:hover {
     background-color: @d_color;
 }
-
+//Shielding
 @path: ~"images";
 /*Background picture*/
 body{
     background-size: cover;
-    background-image: url(~"@{path}/Xq5CsOIv1A8.jpg");
+    background-image: url(~"../@{path}/Xq5CsOIv1A8.jpg");
     background-attachment: fixed;
 }
 
 /*Styling main blocks*/
 header, menu, article, footer{
+    //using combined functions
     background-color: desaturate(darken(@d_color,20%),12%);
     opacity: .6;
+    //using function
     color: lighten(@l_color,20%);
+    //using mixins
     .border_radius;
 }
 /*Positioning and sizing the header*/
 header{
+    //using mixins
     .pos_center;
     width: 50%;
     padding: 10px;
@@ -78,7 +87,7 @@ header div{
     display: @lineblock;
     font-size: 35px;
     vertical-align: middle;
-    margin-left: 9%;
+    margin-left: 12%;
 }
 /*I set the size of the picture*/
 .header_img{
@@ -93,6 +102,7 @@ menu{
 }
 /*Working with list blocks*/
 menu li{
+    .li-style;
     margin: 20px;
     list-style-type: none;
 }
