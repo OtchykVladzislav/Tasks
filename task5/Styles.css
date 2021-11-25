@@ -1,0 +1,143 @@
+*{
+    font-family: fantasy;
+}
+
+body{
+    background:
+    linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 100%),
+    linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 100%),
+    linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 100%);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#collection{
+    position: absolute;
+    right: 10%;
+    top:10%;
+    text-align: center;
+} 
+
+#conteiner{
+    display: none;
+    width: 450px;
+}
+
+#turn{
+    height: 60px;
+    width: 100px;
+    margin-right: 130px;
+    outline: auto;
+    font-size: 20px;
+    background: linear-gradient(orange, 50%, rgb(231, 67, 94));  
+} 
+
+#answer{
+    height: 200px;
+    width: 400px;
+    outline: auto;
+    font-size: 22px;
+    padding: 15px;
+    background-color: #999;
+    text-align: left;
+    margin: 5px;
+    color: black;
+}
+
+#sent{
+    height: 50px;
+    width: 120px;
+    outline: auto;
+    font-size: 20px;
+    background: linear-gradient(orange, 50%, rgb(231, 67, 94));  
+}
+
+#main{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#methods{
+    text-align: center;
+    outline: auto;
+    padding: 15px;
+    background: linear-gradient(orange, 50%, rgb(231, 67, 94));   
+}
+
+h1{
+    font-size: 25px;
+}
+#methods div{
+    display: inline-block;
+    margin-bottom: 2px;
+    font-size: 21px;
+    opacity: .9;
+}
+
+#operations{
+    text-align: center;
+}
+
+#operations button{
+    height: 70px;
+    width: 70px;
+    margin: 7px;
+    font-size: 25px;
+    background: linear-gradient(orange, 20%, rgb(231, 67, 94));
+    outline: auto;
+    cursor: pointer;
+}
+
+#text{
+    margin: 10px;
+    display: inline-block;
+    padding: 0 25px 0 25px;
+    text-align: center;
+}
+
+#text div{
+    height: 70px;
+    width: 400px;
+    outline: auto;
+    line-height: 70px;
+    font-size: 25px;
+    padding: 0 0 0 15px;
+    background-color: #999;
+    text-align: left;
+    margin: 5px;
+    overflow: auto;
+}
+
+#Dot{
+    display: none;
+}
+
+#text button{
+    text-align: center;
+    outline: auto;
+    height: 65px;
+    width: 65px;
+    font-size: 19px;
+    background: linear-gradient(yellow, 20%,rgb(228, 149, 2));
+    cursor: pointer;
+    margin: 10px;
+}
+
+
+#numbers{
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#numbers button{
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    font-size: 25px;
+    background: linear-gradient(rgb(48, 169, 250), 20%, rgb(253, 41, 236));
+    outline: auto;
+    cursor: pointer;
+}
