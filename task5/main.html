@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <head>
     <title>TestCalc</title>
-    <link rel="stylesheet" href="Styles.css">
+    <link rel="stylesheet" href="css/Styles.css">
     <link rel="shortcut icon" href="image/icon.jpg" type="image/png">
 </head>
 <body>
+    <!--Answer window and send to server-->
     <div id="collection">
         <button id="turn" onclick="Turn_on()">Ответы</button>
         <div id="conteiner">
@@ -14,6 +15,7 @@
         </div>
     </div>
     <div id="main">
+        <!--Methods calculations-->
         <div id="methods">
             <div>
                 <h1>Виды</h1>
@@ -22,10 +24,11 @@
             </div>
             <div>
                 <h1>Приоритеты</h1>
-                <div><input type="checkbox" name="check" id="with" checked>С приоритетом</div>
-                <div><input type="checkbox" name="check" id="without">Без приоритета</div>
+                <div><input type="checkbox" name="check" id="with" onclick="With()" checked>С приоритетом</div>
+                <div><input type="checkbox" name="check" id="without" onclick="WithoutBrack()">Без приоритета</div>
             </div>
         </div>
+        <!--Main functions-->
         <div id="text">
             <div id="input"></div>
             <button class="button">=</button>
@@ -33,12 +36,14 @@
             <button class="button">Del</button>
             <button class="button" id="Dot">.</button>
         </div>
+        <!--Buttons operations-->
         <div id="operations">
             <button class="button">+</button>
             <button class="button">-</button>
             <button class="button">/</button>
             <button class="button">*</button>
         </div>
+        <!--Buttons numbers-->
         <div id="numbers">
             <button class="button">1</button>
             <button class="button">2</button>
@@ -49,11 +54,11 @@
             <button class="button">7</button>
             <button class="button">8</button>
             <button class="button">9</button>
-            <button class="button">(</button>
+            <button class="button" id="lbrack">(</button>
             <button class="button">0</button>
-            <button class="button">)</button>
+            <button class="button" id="rbrack">)</button>
         </div>
     </div>
-    <script src="Calc.js"></script>
+    <script src="js/Calc.js"></script>
 </body>
 </html>
