@@ -1,0 +1,219 @@
+*{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+body{
+    background: linear-gradient(#e66465, #9198e5);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+header{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: underline;
+}
+
+header div{
+    margin: 0 0 0 25px;
+    font-size: 40px;
+    text-align: center;
+}
+article{
+    padding-top: 50px;
+}
+article div{
+    display: inline-block;
+}
+
+.prices{
+  position: fixed;
+  left:62%;
+  top:56%;
+  font-weight: 900;
+}
+
+.wrapper{
+    width: 35%;
+}
+.wrapper div{
+    margin-left: 10%;
+    padding: 5px;
+    text-align: justify;
+}
+
+.creator-pizza{
+    position: relative;
+    width: 506px;
+    height: 506px;
+}
+
+.creator-pizza .current-item{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top:10%;
+    display: none;
+}
+
+
+.creator-pizza .current-item.active {
+    display: block;
+  }
+.creator-pizza .current-item.thin, .current-item.thick, .current-item.italian, .current-item.calzone, .current-item.puff {
+    background-image: url("../пицца/osnova.png");
+    z-index: 0; 
+  }
+.creator-pizza .current-item.ketchup {
+    background-image: url("../пицца/20170504064513sous_tomatnyy_ostryy_100g_bigx1_20_93696.png");
+    z-index: 1; 
+  }
+.creator-pizza .current-item.white {
+    background-image: url("../пицца/20170504073407sous_slivochnyy_100g_bigx1_375_35918.png"); 
+    z-index: 1;
+  }
+.creator-pizza .current-item.meat {
+    background-image: url("../пицца/20170508084636cnstr35.png");
+    z-index: 2; 
+  }
+.creator-pizza .current-item.sausages {
+    background-image: url("../пицца/20170508093500nachinka09.png"); 
+    z-index: 2;
+  }
+.creator-pizza .current-item.olive {
+    background-image: url("../пицца/20170508084803cnstr57.png");
+    z-index: 2; 
+  }
+.creator-pizza .current-item.seafood {
+    background-image: url("../пицца/20170508093515nachinka16.png"); 
+    z-index: 2;
+  }
+.creator-pizza .current-item.cheese {
+    background-image: url("../пицца/20170504073708cnstr22.png");
+    z-index: 3;
+  }
+.creator-pizza .current-item.tomato{
+    background-image: url("../пицца/20170508084517cnstr511.png"); 
+    z-index: 2;
+  }
+.creator-pizza .current-item.barbeque{
+    background-image: url("../пицца/2017050909572088927416415c948a0a7e3bde08c1d3fc.png"); 
+    z-index: 4;
+  }
+
+.text{
+  border-bottom: 1px solid black;
+  font-size: 20px;
+  margin-right: 50px;
+}
+
+#ord{
+  outline: auto;
+  padding: 15px;
+  background: linear-gradient(rgb(253, 85, 253) , rgb(248, 147, 248));
+  display: none;
+  cursor: pointer;
+}
+
+#ord:hover{
+  transform: scale(1.2);
+}
+
+.modal{
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.modalsubject{
+  position: absolute;
+  text-align: center;
+  outline: auto;
+  width: 400px;
+  height: 200px;
+  left: 38%;
+  top:30%;
+  opacity: .9;
+  background:linear-gradient(#e66465, #9198e5);
+  padding: 5px; 
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.2s;
+  animation-name: animatetop;
+  animation-duration: 0.2s;
+}
+
+@-webkit-keyframes animatetop {
+  from {
+    top: -200px;
+    opacity: 0
+  }
+  to {
+    top: 0;
+    opacity: 1
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -200px;
+    opacity: 0
+  }
+  to {
+    top: 0;
+    opacity: 1
+  }
+}
+
+.modal.none{
+  display: none;
+}
+
+.modaltext{
+  width: 100%;
+  font-size: 18px;
+}
+
+#modal div{
+  margin-top: 10px;
+}
+
+#byu{
+  position: absolute;
+  top: 80%;
+  left: 40%;
+  outline: auto;
+  background: linear-gradient(rgb(253, 85, 253) , rgb(248, 147, 248));
+  padding: 5px;
+  cursor: pointer;
+}
+
+#byu:hover{
+  transform: scale(1.2);
+}
+
+
+footer{
+    font-size: 22px;
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:50px;
+    width:100%;
+    text-align: center;
+}
+
+footer div{
+    display: inline-block;
+    margin: 0 50px 0 0;
+}

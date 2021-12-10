@@ -2,9 +2,87 @@
 <html>
     <head>
         <title>PizzaTime</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" href="пицца/20v58PICD9d7z4V41T3Ui_PIC2018.png_860.png" type="image/x-icon">
     </head>
     <body>
-        <script src="main.js"></script>
+        <header>
+            <div>PizzaTime</div>
+        </header>
+        <article >
+            <div class="prices">Важно!!! Цена с учетом наценки пиццерии.</div>
+            <div class="wrapper">
+                <div class="testos" style="margin-top: 5%;">
+                    <dl>
+                        <dt>Тесто</dt>
+                            <dd><input type="radio" class="choose" name="testo" value="thin">Тонкое</dd>
+                            <dd><input type="radio" class="choose" name="testo" value="thick">Толстое</dd>
+                            <dd><input type="radio" class="choose" name="testo" value="calzone">Кальцоне</dd>
+                            <dd><input type="radio" class="choose" name="testo" value="italian">Итальянское</dd>
+                            <dd><input type="radio" class="choose" name="testo" value="puff">Слоёное</dd>
+                    </dl>
+                </div>
+                <div class="sauces">
+                    <dl>
+                        <dt>Соусы</dt>
+                            <dd><input type="checkbox" class="choose" name="sause" value="ketchup">Соус красный</dd>
+                            <dd><input type="checkbox" class="choose" name="sause" value="white">Соус белый</dd>
+                    </dl>
+                </div>
+                <div class="ingredients">
+                    <dl>
+                        <dt>Ингридиенты</dt>
+                            <dd><input type="checkbox" class="choose" value="meat">Мясо</dd>
+                            <dd><input type="checkbox" class="choose" value="sausages">Сосиски</dd>
+                            <dd><input type="checkbox" class="choose" value="olive">Оливки</dd>
+                            <dd><input type="checkbox" class="choose" value="seafood">Морепродукты</dd>
+                            <dd><input type="checkbox" class="choose" value="cheese">Сыр</dd>
+                            <dd><input type="checkbox" class="choose" value="tomato">Помидоры</dd>
+                            <dd><input type="checkbox" class="choose" value="barbeque">Соус "Барбекью"</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="creator-pizza">
+                <div class="current-item thin"></div>
+                <div class="current-item thick"></div>
+                <div class="current-item calzone"></div>
+                <div class="current-item italian"></div>
+                <div class="current-item puff"></div>
+                <div class="current-item ketchup"></div>
+                <div class="current-item white"></div>
+                <div class="current-item meat"></div>
+                <div class="current-item sausages"></div>
+                <div class="current-item olive"></div>
+                <div class="current-item seafood"></div>
+                <div class="current-item cheese"></div>
+                <div class="current-item tomato"></div>
+                <div class="current-item barbeque"></div>
+            </div>
+            <div class="order">
+                <div class="text" id="amountBel">0<span>    BYN</span></div>
+                <div class="text" id="countKk">0<span>  kcal.</span></div>
+                <button id="ord">Сделать заказ</button>
+            </div>
+
+            <div class="modal none">
+                <div class="modalsubject">
+                    <div class="modaltext">Ваш заказ</div></br>
+                    <div id="ordertext"></div></br>
+                    <div id="byu">Заказать</div>
+                </div>
+            </div>
+
+        </article>
+        <footer>
+            <div>© Отчик Владислав</div>
+            <div>01 декабря 2021</div>
+            <div>Version: 1.0</div>
+        </footer>
+        <script src="js/base.js"></script>
+        <script src="js/sauses.js"></script>
+        <script src="js/Pizza.js"></script>
+        <script src="js/filling.js"></script>
+        <script src="js/product.js"></script>
+        <script src="js/main.js"></script>
     </body>
 </html>
