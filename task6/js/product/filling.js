@@ -1,5 +1,4 @@
 'use strict'
-module.exports = ingredients;
 /**
  * This class describes sauces
  * what can be included in the pizza.
