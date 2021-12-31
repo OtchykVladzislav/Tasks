@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <article>
+        <div class="area" id="Area1"></div>
+        <div class="area" id="Area2"></div>
+        <div class="area" id="Area3"></div>
+        <div class="area" id="Area4"></div>
+        <div class="event">
+                <div class="label">
+                    Создание события
+               </div>
+               <div class="contents">
+                    <div class="contents content">
+                        <div class="data add">
+                            <div>Дата события:</div>
+                            <div><input type="date" id="add-date"></div>
+                        <div class="time add">
+                            <div>Время события:</div>
+                            <div><input type="time" id="add-time"></div>
+                        </div>
+                        <div class="name add">
+                            <div>Наименование события:</div>
+                            <div><input type="text" id="add-name"></div>
+                        </div>
+                        <div class="degree add">
+                            <div>Степень важности:</div>
+                            <div><input type="text" id="add-degree"></div>
+                        </div>
+                        <div class="description add">
+                            <div>Примечание:</div>
+                            <div><input type="text" id="add-description"></div>
+                        </div>
+                        <div class="add">
+                            <div class="select-file">
+                                <select id="file-add">
+                                    <option value="area[1].json">Files1</option>
+                                    <option value="area[2].json">Files2</option>
+                                    <option value="area[3].json">Files3</option>
+                                </select>
+                                <div class="btn" id="add-btn">
+                                    Add
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+        </div>
+    </div>
+    </article>
+    <script src="js/work.js"></script>
+    <script src="js/class.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

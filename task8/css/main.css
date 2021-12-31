@@ -1,0 +1,13 @@
+article{
+    text-align: center;
+}
+
+article .area{
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    outline: auto;
+    overflow: auto;
+    background-color: gray;
+    font-size: 15px;
+}
