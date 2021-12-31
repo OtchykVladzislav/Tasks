@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="css/Main.css">
+</head>
+<body onload="trash()">
+    <a href="Main.html" style="z-index: 999;"><div>>Вернуться в галерею<</div></a>
+    <div class="main" ondragover="onDragOver(event);">
+        <div id="trashOp"><img src="images/TrashOpen.jpg" ondrop="onDrop(event);" ondragleave="onDragLeave(event);"></div>
+        <div id="trashCl"><img src="images/TrashClose.jpg"></div>
+    </div>
+    <div id="trash"></div>
+    <script src="js/Game.js"></script>
+</body>
+</html>

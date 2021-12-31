@@ -1,0 +1,107 @@
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 800;
+}
+
+/* полоса прокрутки (скроллбар) */
+::-webkit-scrollbar {
+    width: 24px; /* ширина для вертикального скролла */
+    height: 8px; /* высота для горизонтального скролла */
+    background-color: white;
+    border-radius: 9em;
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+    background-color: wheat;
+    border-radius: 9em;
+    box-shadow: inset 1px 1px 10px #f3faf7;
+}
+
+
+body{
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+}
+header{
+    position: fixed;
+    box-shadow: 5px;
+    font-size: 25px;
+    text-align: center;
+    height: 25px;
+    width: 98%;
+    background-color: #DBC9A5;
+    padding: 10px;
+    box-shadow: 10px 5px 5px wheat;
+    border-radius: 2px;
+}
+
+article{
+    background-color: #DBC9A5;
+    opacity: .9;
+    position: fixed;
+    width: 650px;
+    height: 80%;
+    top: 10%;
+    left: 35%;
+    border-radius: 2px;
+    overflow: auto;
+}
+
+a{
+    position: absolute;
+    left: 25px;
+    top:75px;
+    font-size: 25px;
+    color: #000;
+}
+
+
+section{
+    background-color: white;
+    width: 600px;
+    text-align: center;
+    outline: auto;
+    margin: 15px auto 15px auto;
+}
+
+footer{
+    position: absolute;
+    top:890px;
+    text-align: center;
+    font-size: 20px;
+    width: 98%;
+    background-color: #DBC9A5;
+    padding: 5px 10px 5px 10px;
+    border-radius: 2px;
+}
+
+
+footer div{
+    display: inline-block;
+    margin: 15px;
+}
+
+
+/*another web site*/
+
+#trash{
+    position: relative;
+}
+
+.main{
+    position: fixed;
+    right: 25px;
+    top:150px;
+}
+
+.main #trashCl{
+    background: url(../images/TrashClose.jpg) no-repeat;
+    display: block;
+}
+
+.main #trashOp{
+    background: url(../images/TrashOpen.jpg) no-repeat;
+    display: none;
+}
