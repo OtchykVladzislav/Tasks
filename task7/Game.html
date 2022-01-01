@@ -8,8 +8,8 @@
 <body onload="trash()">
     <a href="Main.html" style="z-index: 999;"><div>>Вернуться в галерею<</div></a>
     <div class="main" ondragover="onDragOver(event);">
-        <div id="trashOp"><img src="images/TrashOpen.jpg" ondrop="onDrop(event);" ondragleave="onDragLeave(event);"></div>
-        <div id="trashCl"><img src="images/TrashClose.jpg"></div>
+        <img src="images/TrashOpen.jpg" id="trashOp" ondrop="onDrop(event);" ondragleave="onDragLeave(event);">
+        <img src="images/TrashClose.jpg" id="trashCl">
     </div>
     <div id="trash"></div>
     <script src="js/Game.js"></script>
