@@ -13,9 +13,6 @@ let update = updateDataEvent(3000);
     setTimeout(() => {
         getFile('area[3].json', 'Area3')
     }, 3000)
-    document.getElementById('add-btn').addEventListener('click', () => {
-        addEventToJsonFile()
-    })
     defaultURL = createURL('localhost:3000')
 })()
 
@@ -23,10 +20,27 @@ update(1000, 'area[1].json', 'Area1')
 update(2000, 'area[2].json', 'Area2')
 update(3000, 'area[3].json', 'Area3')
 
+document.forms["editForm"].addEventListener("submit", e => {
+    e.preventDefault();
+    addEventToJsonFile();
+    document.getElementById('Area4').appendChild(createLog("Успешно!", 'orange'))
+})
+
+document.querySelector("select").addEventListener('change', async function (e) {
+    const json = await getJson(e.target.value);
+    const data = JSON.parse(json.events[0]);
+    document.getElementById('ed-btn').style.display = "block";
+    document.forms["editForm"].elements["date"].value = data['dateEvent'];
+    document.forms["editForm"].elements["time"].value = data['timeEvent'];
+    document.forms["editForm"].elements["name"].value = data['nameEvent'];
+    document.forms["editForm"].elements["degree"].value = data['degreeImportanceEvent'];
+    document.forms["editForm"].elements["desc"].value = data['descriptionEvent'];
+})
+
 function addEventToJsonFile(){
   let event = createEvent()
 
-  let fileName = document.getElementById('file-add').value.toString()
+  let fileName = document.getElementById('file-ed').value.toString()
   const url = new URL(defaultURL(`files`))
   fetch(url, {
       method: 'POST',
@@ -38,13 +52,23 @@ function addEventToJsonFile(){
           'Content-Type' : 'application/json'
       }
   })
-  .then(response => response.json())
-  .then(response => {
-      document.getElementById('log').appendChild(createLog(response.msg, 'green'))
-  })
   .catch(err => {
       console.log(`Error: ${err}`)
   })
+}
+
+async function getJson(fileName) {
+    let url = new URL(defaultURL('getData'))
+    let result = await fetch(url, {
+      method: 'POST',
+      body: JSON.stringify({
+          'fileName' : fileName
+      }),
+      headers: {
+          'Content-Type' : 'application/json'
+      }
+    })
+    return await result.json();
 }
 
 function getFile(fileName, divName){
@@ -76,7 +100,7 @@ function getFile(fileName, divName){
           rootEl.innerHTML = response.events
           document.getElementById(divName).appendChild(rootEl)
       }
-      document.getElementById('log').appendChild(createLog(response.msg, 'green'))
+      document.getElementById('Area4').appendChild(createLog(response.msg, '#32CD32'))
   })
   .catch(err => {
       console.log(`Error: ${err}`)

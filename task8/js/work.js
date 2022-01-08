@@ -26,10 +26,10 @@ function updateDataEvent(interval){
 
 function createEvent(){
     return {
-        'date' : document.getElementById('add-date').value.toString(),
-        'time' : document.getElementById('add-time').value.toString(),
-        'name' : document.getElementById('add-name').value.toString(),
-        'degree' : document.getElementById('add-degree').value.toString(),
-        'description' : document.getElementById('add-description').value.toString(),
+        'dateEvent' : document.getElementById('ed-date').value.toString(),
+        'timeEvent' : document.getElementById('ed-time').value.toString(),
+        'nameEvent' : document.getElementById('ed-name').value.toString(),
+        'degreeImportanceEvent' : document.getElementById('ed-degree').value.toString(),
+        'descriptionEvent' : document.getElementById('ed-description').value.toString(),
     }
 }

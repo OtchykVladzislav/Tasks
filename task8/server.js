@@ -15,7 +15,7 @@ const corsOptions ={
 app.use(cors(corsOptions)) // Use this after the variable declaration
 
 
-app.use('/', express.static(__dirname + '/src'))
+app.use('/', express.static(__dirname + '/public'))
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/main.html')
 })
@@ -37,9 +37,10 @@ app.post('/getData', jsonParser, (req, res) => {
         }))
     })
 })
+
 app.post('/files', jsonParser, (req, res) => {
     if (!req.body) res.sendStatus(400)
-
+    fs.truncateSync(req.body.fileName);
     fs.readFile(req.body.fileName, 'utf-8', (err, data) => {
         if (!data){
             let arrayObjectJSON = []
@@ -59,7 +60,7 @@ app.post('/files', jsonParser, (req, res) => {
     fs.readFile(req.body.fileName, 'utf-8', (err, data) => {
         if (err) console.log(`Error: ${err}`)
         res.send(JSON.stringify({
-            'msg' : `Событие успешно добавлено в файл "${req.body.fileName}"!`,
+            'msg' : `Событие успешно отредактировано в файл "${req.body.fileName}"!`,
             'events': data
         }))
     })
