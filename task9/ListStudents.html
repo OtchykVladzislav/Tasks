@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список отчисленных</title>
+    <link rel="stylesheet" href="css/Main.css">
+</head>
+<body onload="getFile()">
+    <header>
+        <div>Список людей</div>
+    </header>
+    <article>
+        <div id="list">
+            <!--Table-->
+            <table id="employeeList">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>First Name</th>
+                        <th>Second Name</th>
+                        <th>Age</th>
+                        <th>Speciality</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody class="row">
+                    <!--data from json-->
+                </tbody>
+            </table>
+        </div>
+        <!--Pagination-->
+        <div class="pagenumbers" id="pagination"></div>
+        <!--Form to add and edit-->
+        <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+            <div id="form-firstName">
+                <label>First Name</label>
+                <input id="firstName" type="text">
+            </div>
+            <div id="form-secondName">
+                <label>Second Name</label>
+                <input id="secondName" type="text">
+            </div>
+            <div id="form-age">
+                <label>Age</label>
+                <input id="age" type="text">
+            </div>
+            <div id="form-speciality">
+                <label>Speciality</label>
+                <input id="speciality" type="text">
+            </div>
+            <button id="insert">Add</button>
+        </form>
+        <!--Edit button separate from the form-->
+        <button id="edit">Edit</button>
+    </article>
+    <footer>
+        <div>© Отчик Владислав</div>
+        <div>18 Декабря 2021</div>
+        <div>Version: 1.0</div>
+    </footer>
+    <script src="js/Main.js"></script>
+    <script src="js/Students.js"></script>
+</body>
+</html>
